@@ -1,0 +1,98 @@
+:root {
+  --color-1: white;
+  --color-2: red;
+  --color-3: white;
+  --color-4: yellow;
+  --bg-color: rgb(254, 128, 0); /* orange */
+  --nav-color: black;
+  --nav-text-hover: yellow;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--color-3);
+  font-family: "Recursive", cursive;
+  background-image: url(https://d1fdloi71mui9q.cloudfront.net/6Q6WiifsQXuhd9xeo3BG_UshiRelax.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 80px;
+  background-position-x: right;
+  background-attachment: fixed;
+  /* background-size: cover; */
+}
+
+nav {
+  background-color: var(--nav-color);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+nav ul {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  color: var(--color-1);
+  font-size: 1.5em;
+}
+
+nav ul li:hover {
+  color: var(--nav-text-hover);
+  font-variation-settings: "wght" 700;
+}
+
+main {
+  position: absolute;
+  top: 80px;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  /* height: 100vh; */
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 75%;
+  height: 100vh;
+  overflow: scroll;
+  /* background-color: rgba(256, 0, 256, 0.5); */
+}
+
+.box h1 {
+  font-size: 6em;
+  line-height: 1.25em;
+  margin-top: 0.75em;
+}
+
+/* .box h1:hover {
+  background-color: var(--color-2);
+} */
+
+.box p {
+  margin-left: 5%;
+  margin-right: 25%;
+  margin-top: 1em;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  /* background-color: rgba(256, 128, 128, 1);
+  padding: 0.5em; */
+}
+
+.social {
+  font-variation-settings: "wght" 800;
+  color: var(--color-4);
+}
