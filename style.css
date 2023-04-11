@@ -26,7 +26,7 @@ body {
 }
 
 nav {
-  background-color: var(--nav-color);
+  background-color: rgb(254,128,129);
   position: fixed;
   top: 0;
   z-index: 3;
