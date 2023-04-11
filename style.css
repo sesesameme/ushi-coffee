@@ -105,19 +105,23 @@ main {
 }
 
 .x {
+  -webkit-animation: x var(--x-speed) linear infinite alternate;
   animation: x var(--x-speed) linear infinite alternate;
 }
 .y {
+  -webkit-animation: y var(--y-speed) linear infinite alternate;
   animation: y var(--y-speed) linear infinite alternate;
 }
 
 @keyframes x {
   100% {
+    -webkit-transform: translateX(calc(100vw - var(--width)));
     transform: translateX(calc(100vw - var(--width)));
   }
 }
 @keyframes y {
   100% {
+    -webkit-transform: translateY(calc(100vh - var(--width) - 80px));
     transform: translateY(calc(100vh - var(--width) - 80px));
   }
 }
