@@ -6,6 +6,11 @@
   --bg-color: rgb(254, 128, 0); /* orange */
   --nav-color: black;
   --nav-text-hover: yellow;
+
+  --width: 300px;
+  --x-speed: 13s;
+  --y-speed: 7s;
+  --transition-speed: 2.2s;
 }
 
 * {
@@ -17,16 +22,11 @@ body {
   background-color: var(--bg-color);
   color: var(--color-3);
   font-family: "Recursive", cursive;
-  background-image: url(https://d1fdloi71mui9q.cloudfront.net/6Q6WiifsQXuhd9xeo3BG_UshiRelax.jpg);
-  background-repeat: no-repeat;
-  background-position-y: 80px;
-  background-position-x: right;
-  background-attachment: fixed;
   /* background-size: cover; */
 }
 
 nav {
-  background-color: rgb(254,128,129);
+  background-color: rgb(254, 128, 129);
   position: fixed;
   top: 0;
   z-index: 3;
@@ -38,8 +38,6 @@ nav ul {
   height: 80px;
   justify-content: space-around;
   align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
 }
 
 nav ul li {
@@ -68,16 +66,19 @@ main {
 }
 
 .box {
+  z-index: 5;
   width: 75%;
-  height: 100vh;
-  overflow: scroll;
+  height: 100%;
   /* background-color: rgba(256, 0, 256, 0.5); */
+  position: absolute;
+  top: 0;
 }
 
 .box h1 {
   font-size: 6em;
   line-height: 1.25em;
   margin-top: 0.75em;
+  margin-right: 15%;
 }
 
 /* .box h1:hover {
@@ -85,7 +86,6 @@ main {
 } */
 
 .box p {
-  margin-left: 5%;
   margin-right: 25%;
   margin-top: 1em;
   font-size: 1.25em;
@@ -97,4 +97,27 @@ main {
 .social {
   font-variation-settings: "wght" 800;
   color: var(--color-4);
+}
+
+.el {
+  z-index: 0;
+  width: var(--width);
+}
+
+.x {
+  animation: x var(--x-speed) linear infinite alternate;
+}
+.y {
+  animation: y var(--y-speed) linear infinite alternate;
+}
+
+@keyframes x {
+  100% {
+    transform: translateX(calc(100vw - var(--width)));
+  }
+}
+@keyframes y {
+  100% {
+    transform: translateY(calc(100vh - var(--width) - 80px));
+  }
 }
